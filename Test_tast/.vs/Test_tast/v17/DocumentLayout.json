@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Proga\\Git-project\\Test_task\\Test_tast\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FBBD286C-B6E0-480C-B10F-C0421D66579F}|Test_tast\\Test_tast.vcxproj|D:\\Proga\\Git-project\\Test_task\\Test_tast\\Test_tast\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FBBD286C-B6E0-480C-B10F-C0421D66579F}|Test_tast\\Test_tast.vcxproj|solutionrelative:Test_tast\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\Proga\\Git-project\\Test_task\\Test_tast\\Test_tast\\main.cpp",
+              "RelativeDocumentMoniker": "Test_tast\\main.cpp",
+              "ToolTip": "D:\\Proga\\Git-project\\Test_task\\Test_tast\\Test_tast\\main.cpp",
+              "RelativeToolTip": "Test_tast\\main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-15T20:25:57.599Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
