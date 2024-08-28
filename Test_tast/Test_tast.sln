@@ -5,6 +5,13 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_tast", "Test_tast\Test_tast.vcxproj", "{FBBD286C-B6E0-480C-B10F-C0421D66579F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tests", "tests\tests.vcxproj", "{EEF918EF-8A38-41A1-AE2A-6CFD42AD382E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FBBD286C-B6E0-480C-B10F-C0421D66579F} = {FBBD286C-B6E0-480C-B10F-C0421D66579F}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C600D9FA-2A29-426C-8372-4BEB455D7BDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +28,14 @@ Global
 		{FBBD286C-B6E0-480C-B10F-C0421D66579F}.Release|x64.Build.0 = Release|x64
 		{FBBD286C-B6E0-480C-B10F-C0421D66579F}.Release|x86.ActiveCfg = Release|Win32
 		{FBBD286C-B6E0-480C-B10F-C0421D66579F}.Release|x86.Build.0 = Release|Win32
+		{EEF918EF-8A38-41A1-AE2A-6CFD42AD382E}.Debug|x64.ActiveCfg = Debug|x64
+		{EEF918EF-8A38-41A1-AE2A-6CFD42AD382E}.Debug|x64.Build.0 = Debug|x64
+		{EEF918EF-8A38-41A1-AE2A-6CFD42AD382E}.Debug|x86.ActiveCfg = Debug|Win32
+		{EEF918EF-8A38-41A1-AE2A-6CFD42AD382E}.Debug|x86.Build.0 = Debug|Win32
+		{EEF918EF-8A38-41A1-AE2A-6CFD42AD382E}.Release|x64.ActiveCfg = Release|x64
+		{EEF918EF-8A38-41A1-AE2A-6CFD42AD382E}.Release|x64.Build.0 = Release|x64
+		{EEF918EF-8A38-41A1-AE2A-6CFD42AD382E}.Release|x86.ActiveCfg = Release|Win32
+		{EEF918EF-8A38-41A1-AE2A-6CFD42AD382E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
