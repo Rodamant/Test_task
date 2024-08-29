@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#include "vector.h"
 
 #include "example.h"
 
@@ -9,3 +10,9 @@ TEST(Example, Sum) {
 TEST(Example, Multiplication) {
     ASSERT_EQ(multiplication(3, 3), 9);
 }
+
+TEST(Vector, DefaultConstructor) {
+    Vector a;
+    ASSERT_EQ(a.Size(), 0);
+}
+
