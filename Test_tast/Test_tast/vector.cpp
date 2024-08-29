@@ -6,17 +6,35 @@ Vector::Vector()
 }
 void Vector::PushBack(int value)
 {
-	this->vector = new int[size + 1];
-	if (size > 0)
+	int* newVector = new int[size + 1];
+
+	for (int i = 0; i < size; i++)
 	{
-		for (int i = 0; i < size; i++)
-		{
-			this->vector[i] = vector[i];
-		}
+		newVector[i] = vector[i];
 	}
-	this->vector[size] = value;
+	newVector[size] = value;
+	delete[] vector;
+	vector = newVector;
+	size++;
 
 }
+
+int Vector::Size() const
+{
+	return size;
+}
+
+const int& Vector::operator[](int index) const
+{
+	return vector[index];
+}
+
+int& Vector::operator[](int index)
+{
+	return vector[index];
+}
+
+
 Vector::~Vector()
 {
 	delete[] this->vector;
