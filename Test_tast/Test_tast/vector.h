@@ -8,6 +8,7 @@ public:
 	~Vector();
 	void PushBack(int value);
 	void PushFront(int value);
+	void Insert(int index, int value);
 	void PopBack();
 	int Size() const;
 	int& operator [](int index); 

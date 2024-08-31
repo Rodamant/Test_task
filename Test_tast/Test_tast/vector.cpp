@@ -1,4 +1,6 @@
 #include "vector.h"
+#include "cassert"
+#include <stdexcept>
 
 Vector::Vector()
 {
@@ -6,28 +8,37 @@ Vector::Vector()
 }
 void Vector::PushBack(int value)
 {
-	int* newVector = new int[size + 1];
-
-	for (int i = 0; i < size; i++)
-	{
-		newVector[i] = vector[i];
-	}
-	newVector[size] = value;
-	delete[] vector;
-	vector = newVector;
-	size++;
-
+	Insert(size, value);
 }
 
 void Vector::PushFront(int value)
 {
+	Insert(0, value);
+}
+
+void Vector::Insert(int index, int value)
+{	
+	if (index < 0) {
+		throw std::out_of_range("index must be >= 0");
+	}
+	if (index > size) {
+		throw std::out_of_range("index must be <= size");
+	}
+		
+
 	int* newVector = new int[size + 1];
 
-	for (int i = 1; i < size; i++)
+	for (int i = 0; i < index; i++)
 	{
 		newVector[i] = vector[i];
 	}
-	newVector[0] = value;
+	newVector[index] = value;
+	
+	for (int j = index; j < size; j++)
+	{
+		newVector[j+1] = vector[j];
+	}
+
 	delete[] vector;
 	vector = newVector;
 	size++;

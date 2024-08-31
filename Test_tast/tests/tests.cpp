@@ -64,3 +64,53 @@ TEST(Vector, PopBack) {
     ASSERT_EQ(a.Size(), 2);
     ASSERT_EQ(a[1], 3);
 }
+
+TEST(Vector, Insert)
+{
+    Vector a;
+
+    a.PushBack(1);
+    a.PushBack(2);
+    a.PushBack(3);
+    a.PushBack(5);
+    a.Insert(3, 4);
+    ASSERT_EQ(a[3], 4);
+}
+
+TEST(Vector, Insert_index0)
+{
+    Vector a;
+
+    a.Insert(0, 4);
+    ASSERT_EQ(a[0], 4);
+}
+
+TEST(Vector, Insert_index_last)
+{
+    Vector a;
+
+    a.PushBack(1);
+    a.PushBack(2);
+    a.PushBack(3);
+    a.PushBack(5);
+    a.Insert(4, 4);
+    ASSERT_EQ(a[4], 4);
+}
+
+TEST(Vector, Insert_index_empty_vector)
+{
+    Vector a;
+
+    a.Insert(0, 1);
+    ASSERT_EQ(a[0], 1);
+}
+
+TEST(Vector, Insert_KeepOrder)
+{
+    Vector a;
+
+ 
+    a.PushBack(5);
+    a.Insert(0, 4);
+    ASSERT_EQ(a[1], 5);
+}
