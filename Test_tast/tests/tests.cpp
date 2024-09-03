@@ -114,3 +114,12 @@ TEST(Vector, Insert_KeepOrder)
     a.Insert(0, 4);
     ASSERT_EQ(a[1], 5);
 }
+
+TEST(Vector, Erase)
+{
+    Vector a;
+
+    a.PushBack(5);
+    a.Erase(0);
+    ASSERT_EQ(a.Size(),0);
+}

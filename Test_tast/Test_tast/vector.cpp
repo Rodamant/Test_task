@@ -44,17 +44,41 @@ void Vector::Insert(int index, int value)
 	size++;
 }
 
-void Vector::PopBack()
+void Vector::Erase(int index)
 {
-	size--;
-	int* newVector = new int[size];
+	if (index < 0) {
+		throw std::out_of_range("index must be >= 0");
+	}
+	if (index > size) {
+		throw std::out_of_range("index must be <= size");
+	}
+	
+	int* newVector = new int[size-1];
 
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < index; i++)
 	{
 		newVector[i] = vector[i];
 	}
+
+	for (int i = index+1; i < size; i++)
+	{
+		newVector[i - 1] = vector[i];
+	}
+
 	delete[] vector;
 	vector = newVector;
+	size--;
+}
+
+
+void Vector::PopBack()
+{
+	
+}
+
+void Vector::PopFront()
+{
+	
 }
 
 int Vector::Size() const
