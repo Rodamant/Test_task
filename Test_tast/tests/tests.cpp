@@ -88,3 +88,52 @@ TEST(List, DefaultConstructor)
     List<int> lst;
     ASSERT_EQ(lst.GetSize(), 0);
 }
+
+TEST(List, PushBack)
+{
+    List<int> lst;
+    lst.PushBack(1);
+    ASSERT_EQ(lst[0], 1);
+    ASSERT_EQ(lst.GetSize(), 1);
+}
+
+TEST(List, PushFront)
+{
+    List<int> lst;
+    lst.PushFront(1);
+    ASSERT_EQ(lst[0], 1);
+    ASSERT_EQ(lst.GetSize(), 1);
+}
+
+
+TEST(List, PopFront)
+{
+    List<int> lst;
+    lst.PushFront(1);
+    lst.PopFront();
+    ASSERT_EQ(lst.GetSize(), 0);
+}
+
+TEST(List, PopBack)
+{
+    List<int> lst;
+    lst.PushFront(1);
+    lst.PopBack();
+    ASSERT_EQ(lst.GetSize(), 0);
+}
+
+TEST(List, RemoveAt)
+{
+    List<int> lst;
+    lst.PushFront(1);
+    lst.RemoveAt(0);
+    ASSERT_EQ(lst.GetSize(), 0);
+}
+
+TEST(List, Clear)
+{
+    List<int> lst;
+    lst.PushFront(1);
+    lst.Clear();
+    ASSERT_EQ(lst.GetSize(), 0);
+}

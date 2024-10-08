@@ -9,10 +9,11 @@ public:
 	void PushFront(T data);
 	void Insert(T data, int index);
 	T& operator[](const int index);
+	const T& operator[](const int index) const;
 	void PopFront();
 	void RemoveAt(int index);
 	void PopBack();
-	int GetSize() { return size; };
+	const int GetSize() { return size; };
 	void Clear();
 
 
@@ -51,7 +52,7 @@ inline List<T>::~List()
 }
 
 template<typename T>
-inline void List<T>::PushBack(T data)
+void List<T>::PushBack(T data)
 {
 	if (head == nullptr)
 	{
@@ -114,6 +115,23 @@ inline T& List<T>::operator[](const int index)
 }
 
 template<typename T>
+inline const T& List<T>::operator[](const int index) const
+{
+	int counter = 0;
+	Node<T>* current = this->head;
+	while (current != nullptr)
+	{
+		if (counter == index)
+		{
+			return current->data;
+		}
+		current = current->pNext;
+		counter++;
+	}
+
+}
+
+template<typename T>
 inline void List<T>::PopFront()
 {
 	Node<T>* temp = head;
@@ -151,7 +169,7 @@ inline void List<T>::PopBack()
 template<typename T>
 inline void List<T>::Clear()
 {
-	while (size)
+	while (size>0)
 	{
 		PopFront();
 	}
